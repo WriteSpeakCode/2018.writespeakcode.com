@@ -44,9 +44,11 @@ createNameBlock = (name, title, company) => {
     `;
 }
 
-createSpeakerTile = (speakerId, nameBlock, name) => {
+createSpeakerTile = (speakerId, nameBlock, name, imgFilename) => {
+    const imgFile = imgFilename || `${speakerId}.jpg`;
+
     return `<li class="gridder-list" data-griddercontent="#${speakerId}">
-        <img src="./assets/img/speakers/${speakerId}.jpg" alt="${name} headshot" nopin="nopin">
+        <img src="./assets/img/speakers/${imgFile}" alt="${name} headshot" nopin="nopin">
         <div class="name-title">
             ${nameBlock}
         </div>
@@ -82,7 +84,8 @@ createSpeakerElements = (speaker) => {
     const {
         name,
         title,
-        company
+        company,
+        imgFilename
     } = speaker;
 
     speakerId = createSpeakerIdString(name);
@@ -90,7 +93,7 @@ createSpeakerElements = (speaker) => {
     nameBlock = createNameBlock(name, title, company);
     console.log("nameBlock:", nameBlock)
 
-    tile = createSpeakerTile(speakerId, nameBlock, name);
+    tile = createSpeakerTile(speakerId, nameBlock, name, imgFilename);
     bio = createSpeakerBioDiv(speakerId, nameBlock, speaker);
     return [tile, bio]
 }
