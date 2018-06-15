@@ -2,7 +2,7 @@ const localData = 'assets/data.json';
 const remoteData = 'https://gist.githubusercontent.com/courte/4899ecb6eb8ce0d7e0bedca3a2e7ff0c/raw/71f61194281d6a2f1832a0e0beeafa397edfdfb7/data.json';
 
 getData = (url) => {
-    let data;
+    var data;
 
     $.ajax({
         'async': false,
@@ -21,8 +21,8 @@ getData = (url) => {
 }
 
 getSpeakerData = (url, tries = 0) => {
-    let attempts;
-    let data;
+    var attempts;
+    var data;
 
     for (url of [localData, remoteData]) {
         data = getData(url);
