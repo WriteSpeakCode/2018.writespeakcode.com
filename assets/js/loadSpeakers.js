@@ -119,6 +119,7 @@ createSpeakerBioDiv = (speakerId, nameBlock, speakerObj) => {
 }
 
 createSpeakerElements = (speaker) => {
+    console.log("speaker_data:", speaker);
     const {
         name,
         jobTitle,
@@ -136,6 +137,7 @@ createSpeakerElements = (speaker) => {
 
 loadSpeakers = () => {
     const speakerData = getSpeakerData();
+    console.log("the speaker data is:", speakerData);
 
     var speakerTileItems = "";
     var speakerBioItems = "";
