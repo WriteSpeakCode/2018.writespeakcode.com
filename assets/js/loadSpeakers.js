@@ -1,5 +1,5 @@
-const localData = 'assets/data.json';
-const remoteData = 'https://gist.githubusercontent.com/courte/4899ecb6eb8ce0d7e0bedca3a2e7ff0c/raw/71f61194281d6a2f1832a0e0beeafa397edfdfb7/data.json';
+const LOCAL_DATA_URL = 'assets/data.json';
+const REMOTE_DATA_URL = 'https://gist.githubusercontent.com/courte/4899ecb6eb8ce0d7e0bedca3a2e7ff0c/raw/2c5b7b34a5230c0d148f8a9f46b9cfbc9ffc8524/data.json';
 
 getData = (url) => {
     var data;
@@ -20,22 +20,20 @@ getData = (url) => {
     return data;
 }
 
-getSpeakerData = (url, tries = 0) => {
-    var attempts;
-    var data;
+getSpeakerData = () => {
+    const speakers = [];
 
-    for (url of [localData, remoteData]) {
-        data = getData(url);
-        if (data) {
-            return data.speakers;
-        }
-        else if (attempts) {
-            return [];
-        }
-        else {
-            attempts = 1;
+    for (url of [LOCAL_DATA_URL, REMOTE_DATA_URL]) {
+        if (speakers.length == 0) {
+            data = getData(url);
+            // console.log('the data for url', url, 'is', data);
+            if (data && data.speakers) {
+                return data.speakers;
+            }
         }
     }
+
+    return speakers;
 }
 
 createSpeakerIdString = (name) => {
@@ -119,7 +117,7 @@ createSpeakerBioDiv = (speakerId, nameBlock, speakerObj) => {
 }
 
 createSpeakerElements = (speaker) => {
-    console.log("speaker_data:", speaker);
+    // console.log("speaker_data:", speaker);
     const {
         name,
         jobTitle,
@@ -129,7 +127,7 @@ createSpeakerElements = (speaker) => {
     const speakerId = createSpeakerIdString(name);
     const nameBlock = createNameBlock(name, jobTitle, company);
 
-    console.log("imgFilename:", imgFilename)
+    // console.log("imgFilename:", imgFilename)
     const tile = createSpeakerTile(speakerId, nameBlock, name, imgFilename);
     const bio = createSpeakerBioDiv(speakerId, nameBlock, speaker);
     return [tile, bio]
@@ -137,7 +135,7 @@ createSpeakerElements = (speaker) => {
 
 loadSpeakers = () => {
     const speakerData = getSpeakerData();
-    console.log("the speaker data is:", speakerData);
+    // console.log("the speaker data is:", speakerData);
 
     var speakerTileItems = "";
     var speakerBioItems = "";
