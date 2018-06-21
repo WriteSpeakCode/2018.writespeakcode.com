@@ -1,4 +1,4 @@
-const LOCAL_DATA_URL = 'assets/data.json';
+const LOCAL_DATA_URL = './assets/speakers-data.json';
 const REMOTE_DATA_URL = 'https://gist.githubusercontent.com/courte/4899ecb6eb8ce0d7e0bedca3a2e7ff0c/raw/2c5b7b34a5230c0d148f8a9f46b9cfbc9ffc8524/data.json';
 
 getData = (url) => {
@@ -23,10 +23,10 @@ getData = (url) => {
 getSpeakerData = () => {
     const speakers = [];
 
-    for (url of [LOCAL_DATA_URL, REMOTE_DATA_URL]) {
+    for (url of [LOCAL_DATA_URL]) { //, REMOTE_DATA_URL]) {
         if (speakers.length == 0) {
             data = getData(url);
-            // console.log('the data for url', url, 'is', data);
+             console.log('the data for url', url, 'is', data);
             if (data && data.speakers) {
                 return data.speakers;
             }
@@ -80,8 +80,8 @@ createNameBlock = (name, title, company) => {
     `;
 }
 
-createSpeakerTile = (speakerId, nameBlock, name, imgFilename) => {
-    const imgFile = imgFilename || `${speakerId}.jpg`;
+createSpeakerTile = (speakerId, nameBlock, name, headshot_filename) => {
+    const imgFile = headshot_filename || `${speakerId}.jpg`;
 
     return `<li class="gridder-list" data-griddercontent="#${speakerId}">
         <img src="./assets/img/speakers/${imgFile}" alt="${name} headshot" nopin="nopin">
@@ -120,15 +120,15 @@ createSpeakerElements = (speaker) => {
     // console.log("speaker_data:", speaker);
     const {
         name,
-        jobTitle,
+        job_title,
         company,
-        imgFilename
+        headshot_filename
     } = speaker;
     const speakerId = createSpeakerIdString(name);
-    const nameBlock = createNameBlock(name, jobTitle, company);
+    const nameBlock = createNameBlock(name, job_title, company);
 
-    // console.log("imgFilename:", imgFilename)
-    const tile = createSpeakerTile(speakerId, nameBlock, name, imgFilename);
+    // console.log("headshot_filename:", imgFilename)
+    const tile = createSpeakerTile(speakerId, nameBlock, name, headshot_filename);
     const bio = createSpeakerBioDiv(speakerId, nameBlock, speaker);
     return [tile, bio]
 }
