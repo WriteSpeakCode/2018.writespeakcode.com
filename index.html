@@ -1,53 +1,35 @@
 ---
 layout: default
 ---
-<!-- ## SPEAKERS SECTION ## -->
-<section class="speakers" id="speakers">
-  <div class="qcContainer qcTabTitle clearfix">
-    <div class="row middle-sm">
-      <div class="col-xs-12 col-sm-6">
-        <h2 class="section-title">Speakers</h2>
+
+ <section class="schedule-section" id="about">
+    <div class="qcTabTitle qcContainer clearfix" style="border-bottom: none;">
+      <div class="col-4 col">
+        <h2 class="section-title">About</h2>
+      </div>
+    </div>
+      <div class="qcContainer qcTabDesc">
+        <p class="qcTabDesc">
+          Write/Speak/Code is an <strong>intensive, four-day, hands-on conference</strong> with workshops, personalized feedback sessions, panels, and talks by talented women and non-binary coders. Each day of the conference is themed: Write/Visibility Day, Speak/Leadership Day, Code/Project Day and Growth. Attendees leave the conference having <strong>developed blog posts, conference talks, open source  contributions</strong>, and more. We provide <strong>actionable next steps</strong> and a <strong>supportive community</strong> to keep attendees accountable to the goals they set at the conference and beyond.
+        </p><br/>
+        <p class="qcTabDesc">
+          Our conference features two tracks:
+        </p>
+        <ul class="qcBulletList">
+          <li><strong class="coral">Foundations</strong> features our original Write/Speak/Code curriculum designed to launch you into the next step of thought leadership, conference speaking, or open source coding.  This is a guided track that will have individual, pair, and small group exercises as well as panels and lectures.  Each day will end with the creation of a deliverable: a blog post draft, give a talk, and create a Pull Request!  This track is great for anyone who is new to writing, speaking, or coding or those in transition (moving from individual contributor to lead, re-entering after time off, changing focus areas etc).</li>
+          <li><strong class="coral">Explorations</strong> will include talks, facilitated curriculum, and hands on workshops each day.  Workshops will culminate in creating a deliverable based on the day's theme (for example, a technical zine or an outline for a workshop you can give). This track is great for anyone who has attended our conference in the past, or who feels confident in writing, speaking, and coding from their current expertise.</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <div class="hentry qcContainer">
+      <div id="qcScheduleContentTabs" class="qcPageContentTabs qcScheduleTabs clearfix">
       </div>
     </div>
   </div>
-  <div class="qcContainer hentry">
-    <div class="speaker-grid">
-      <ul class="gridder clearfix">
-
-        {% for speaker in site.data.speakers %}
-          <li id="{{speaker.key}}" class="gridder-list" data-griddercontent="#{{speaker.key}}-content">
-            <img src="./assets/img/speakers/{{speaker.headshot_filename}}" alt="{{speaker.name}} headshot" nopin="nopin">
-            <div class="name-title">
-              <h4>{{speaker.name}}</h4>
-              <h5>{{speaker.job_title}}, {{speaker.company}}</h5>
-            </div>
-          </li>
-        {% endfor %}
-
-      </ul>
-    </div>
-  </div>
-
-  <!-- Bio content for inside the gridder -->
-  {% for speaker in site.data.speakers %}
-
-    <div id="{{speaker.key}}-content" class="gridder-content">
-      <div class="row between-lg middle-sm">
-        <div class="col-xs-12 col-sm-3">
-          <h4>{{speaker.name}}
-            <small>({{speaker.pronouns}})</small>
-          </h4>
-          <h5>{{speaker.job_title}}, {{speaker.company}}</h5>
-          <ul class="spkr-social clearfix">
-            <li><a href="https://twitter.com/{{speaker.twitter}}" target="_blank" rel="noopener" class="tips" title="TWITTER"><i class="icon-twitter icon"></i></a></li>
-          </ul>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-lg-8">
-          <p>{{speaker.bio}}</p>
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-
 </section>
 
+
+{% include speakers.html %}
+
+{% include talks.html %}
