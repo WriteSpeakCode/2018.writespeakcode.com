@@ -224,6 +224,17 @@ a.link.white {
 
 /* ---------- SECTION SPECIFIC STYLES ---------- */
 
+/* SCHOLARSHIPS */
+#scholarships .qcTabDesc {
+  color: white
+}
+
+#scholarships ul {
+  list-style: disc inside none;
+  margin-left: 1em;
+  color: white;
+}
+
 /* PAGE INTRO STYLES */
 .page-intro {
     background: #D5A96C url('../img/WSC-bg.jpg') no-repeat bottom left fixed;
