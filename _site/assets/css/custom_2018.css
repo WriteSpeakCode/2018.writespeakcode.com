@@ -1,0 +1,117 @@
+a:not(.button) {
+  color: #EB6851; }
+
+a:not(.button):hover {
+  color: #172751;
+  cursor: pointer; }
+
+a.link, button {
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+a.link.coral {
+  color: #EB6851; }
+
+a.link.coral:hover {
+  color: #172751; }
+
+a.link.white {
+  color: white; }
+
+.button {
+  border-radius: 8px;
+  color: #fff;
+  padding: 16px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin-top: 16px;
+  font-size: 12px; }
+  .button.primary {
+    background-color: #EB6851;
+    font-weight: bold; }
+  .button.secondary {
+    background-color: #172751; }
+    .button.secondary:hover {
+      background-color: #EB6851;
+      cursor: pointer; }
+    @media (min-width: 768px) {
+      .button.secondary {
+        margin-top: 0px;
+        font-size: 14px;
+        padding: 12px; } }
+
+@media (min-width: 768px) {
+  .section-button-cta {
+    text-align: right; } }
+@media screen and (min-width: 768px) {
+  #mobileNav + section {
+    padding-top: 60px; } }
+.page-intro {
+  background: #D5A96C url("../img/WSC-bg.jpg") no-repeat bottom left fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 3em;
+  border-bottom: 1px solid #F1D8D3; }
+  @media screen and (min-width: 1400px) {
+    .page-intro {
+      border-bottom: none; } }
+  .page-intro #qcOpenNav {
+    background: url(../img/theme/openNavInvert.png) center center; }
+
+#qcSlideText h1 {
+  letter-spacing: 0;
+  line-height: 1.1; }
+  @media only screen and (max-width: 415px) {
+    #qcSlideText h1 {
+      font-size: 25px;
+      /* shrink headline to fit on extra tiny screens */ } }
+#qcSlideText .wsc-conf-text {
+  font-size: .7em;
+  color: #fff; }
+#qcSlideText .wsc-logo-text {
+  color: #D5A96C; }
+
+@media screen and (min-width: 768px) {
+  #qcSlideText h1 {
+    padding-top: 1em; } }
+.title-subheader {
+  color: #fff;
+  opacity: 0.8; }
+
+#slidedesc {
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%; }
+
+#qcCountdown {
+  z-index: 11; }
+
+.volunteer-banner {
+  margin-top: 2em;
+  padding: 1em;
+  background-color: RGBA(241, 216, 211, 0.25);
+  color: #fff;
+  border-radius: 8px; }
+
+/* adapt page intro for mobile sticky nav  */
+.wsc-logo {
+  padding: 2em 2em 0 2em;
+  width: 250px; }
+  @media only screen and (max-width: 767px) {
+    .wsc-logo {
+      width: 200px; } }
+
+@media only screen and (max-width: 767px) {
+  #qcCountdown {
+    background-color: rgba(126, 126, 126, 0.7); }
+
+  .cta .video .register-cta {
+    display: none; } }
+@media only screen and (max-height: 510px) and (max-width: 767px) {
+  #slideContent, .page-intro {
+    height: calc(100% + 60px);
+    min-height: 600px; } }
