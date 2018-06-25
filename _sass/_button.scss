@@ -42,3 +42,41 @@
     padding-top: 60px;
   }
 }
+
+/* INTRO REGISTER NOW BUTTON */
+
+#qcSlideText .cta {
+  color: $white;
+  line-height: 60px;
+  background: $brand-coral;
+  text-transform: uppercase;
+  border-radius: $base-border-radius;
+}
+#qcSlideText .cta:hover {
+  background: rgba(0,0,0,0.3);
+}
+@media only screen and (max-width: $breakpoint-sm-1) {
+  #qcSlideText .cta.video {
+    display: none;
+  }
+}
+
+/* TITO BUTTON - INTRO */
+
+.page-intro .tito-tickets-button {
+  color: $white;
+  line-height: 60px;
+  background: $brand-coral;
+  background-color: $brand-coral;
+  border: none;
+  border-radius: $base-border-radius;
+  letter-spacing: 1px;
+  color: white;
+  cursor: pointer;
+  padding: 0 40px;
+  margin-top: 50px;
+  font-size: 16px;
+}
+.page-intro .tito-tickets-button:hover {
+   background: rgba(0,0,0,0.3);
+}
