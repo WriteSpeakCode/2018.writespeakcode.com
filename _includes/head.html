@@ -4,7 +4,7 @@
   <title>{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.meta_description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/w-s-c-favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/img/w-s-c-favicon.ico" | prepend: site.baseurl }}">
   
   <link rel="canonical" href="{{ page.href }}" />
 
@@ -25,9 +25,12 @@
     <!-- ## FLEXBOX GRID ## -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
   <!-- ## LOAD STYLSHEETS ## -->
-  <link rel="stylesheet" media="all" href="./assets/css/style.css"/>
-  <link rel="stylesheet" media="all" href="./assets/css/custom.css"/>
-    <link rel="stylesheet" media="all" href="./assets/css/custom_2018.css"/>
+<!--   <link rel="stylesheet" media="all" href="./assets/css/style.css"/>
+  <link rel="stylesheet" media="all" href="./assets/css/custom.css"/> -->
+<!--     <link rel="stylesheet" media="all" href="./assets/css/custom_2018.css"/> -->
+  <link rel="stylesheet" media="all" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" media="all" href="{{ "/assets/css/custom.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" media="all" href="{{ "/assets/css/custom_2018.css" | prepend: site.baseurl }}" />
 
   <!-- ## GOOGLE FONTS ## -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans" rel="stylesheet">

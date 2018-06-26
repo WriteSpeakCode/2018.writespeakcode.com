@@ -13,7 +13,7 @@
 
         {% for speaker in site.data.speakers %}
           <li id="{{speaker.key}}" class="gridder-list" data-griddercontent="#{{speaker.key}}-content">
-            <img src="./assets/img/speakers/{{speaker.headshot_filename}}" alt="{{speaker.name}} headshot" nopin="nopin">
+            <img src="{{ speaker.headshot_filename | prepend: "/assets/img/speakers/"  | prepend: site.baseurl }}" alt="{{speaker.name}} headshot" nopin="nopin">
             <div class="name-title">
               <h4>{{speaker.name}}</h4>
               <h5>
