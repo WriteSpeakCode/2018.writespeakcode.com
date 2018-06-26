@@ -26,7 +26,6 @@ getSpeakerData = () => {
     for (url of [LOCAL_DATA_URL]) { //, REMOTE_DATA_URL]) {
         if (speakers.length == 0) {
             data = getData(url);
-             console.log('the data for url', url, 'is', data);
             if (data && data.speakers) {
                 return data.speakers;
             }
