@@ -1,0 +1,150 @@
+/* DESKTOP/TABLET STICKY NAV BAR */
+/* Adds pseudo content before anchor ids so when you link to them, they aren't hidden by the sticky nav*/
+#speakers:target:before,
+#location:target:before,
+#sponsors:target:before,
+#code-of-conduct:target:before,
+#faq:target:before {
+  content:' ';
+  display: block;
+  height: 40px;
+}
+
+.nav-section {
+  background-color: $brand-blush; /*$brand-dark; */
+  text-align: center;
+
+  @media (max-width: $breakpoint-sm-1){
+    .nav-section {
+      display: none;
+    }
+  }
+
+  .middleHeader {
+    position: absolute;
+    background-color:$brand-blush; /*$brand-dark; */
+    text-align: center;
+    width: 100%;
+  }
+
+  ul li {
+    display: inline-block;
+    padding: 1em .75em;
+    font-size: $smallest-font-size;
+    color: $brand-dark;
+
+    @media (min-width: 945px) {
+      padding: 1em 1.25em;
+      font-size: $smaller-font-size;
+    }
+
+    @media (min-width: 1165px) {
+      font-size: 16px;
+    }
+  }
+
+  a {
+    color: $brand-dark;
+
+    &.register-now {
+      color: $brand-coral;
+
+       li:hover {
+        background-color: $brand-coral;
+        color: white;
+      }
+    }
+  }
+  
+  li:hover {
+    background-color: white;
+    color: $brand-dark;
+  }
+
+  .tito-tickets-button {
+    border: none;
+    border-radius: 8px;
+    color: $brand-coral;
+    /*background-color: $brand-dark;*/
+    font-size: $smallest-font-size;
+    padding: 10px;
+    
+    @media (min-width: 945px) {
+      font-size: $smaller-font-size;
+    }
+
+    @media (min-width: 1165px) {
+      font-size: 16px;
+    }
+  }
+
+  .stickyHeader {
+    position: fixed;
+    background-color: $brand-blush; /*$brand-dark; */
+    top: 0px;
+    width: 100%;
+    /* Prevents pseudo elements from appearing on top of nav */
+    z-index: 100;
+  }
+
+}
+
+/* MOBILE STICKY BAR */
+
+@media only screen and (min-width: 768px) {
+  #mobileNav {
+    display: none;
+  }
+}
+
+#qcPriNav #nav-register a {
+  color: $brand-coral;
+}
+
+@media only screen and (max-width: $breakpoint-sm-1) {
+  #mobileNav {
+    background-color: $brand-blush; /*$brand-dark; */
+    color: $brand-dark;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 990;
+    width: 100%;
+    height: 64px;
+  }
+  #qcOpenNav {
+    background: url(../img/theme/openNavInvert.png) center center;
+    top: 6px;
+  }
+
+  #qcSiteNav {
+    background-color: $brand-blush;
+    color: $brand-dark;
+  }
+
+  #qcPriNav {
+    background-color: $brand-blush;
+    color: $brand-dark;
+  }
+
+  #qcSiteNav h4, #qcPriNav li a {
+    color: $brand-dark;
+  }
+
+  /* MOBILE STICKY REGISTER NOW BUTTON */
+
+  .cta {
+    padding: 10px 20px;
+    color: $brand-dark;
+    line-height: 64px;
+    background: $brand-coral;
+    text-transform: uppercase;
+    border-radius: 30px;
+  }
+}
+
+@media only screen and (max-width: 343px){
+  #mobile-cta {
+    text-transform: none; /* Stops button breaking in half on tiny screens */
+  }
+}
