@@ -62,24 +62,6 @@ a.link.white {
 @media only screen and (max-width: 767px) {
   #qcSlideText .cta.video {
     display: none; } }
-/* TITO BUTTON - INTRO */
-.page-intro .tito-tickets-button {
-  color: #fff;
-  line-height: 60px;
-  background: #EB6851;
-  background-color: #EB6851;
-  border: none;
-  border-radius: 8px;
-  letter-spacing: 1px;
-  color: white;
-  cursor: pointer;
-  padding: 0 40px;
-  margin-top: 50px;
-  font-size: 16px; }
-
-.page-intro .tito-tickets-button:hover {
-  background: rgba(0, 0, 0, 0.3); }
-
 .page-intro {
   background: #D5A96C url("../img/WSC-bg.jpg") no-repeat bottom left fixed;
   -webkit-background-size: cover;
@@ -87,12 +69,31 @@ a.link.white {
   -o-background-size: cover;
   background-size: cover;
   padding-bottom: 3em;
-  border-bottom: 1px solid #F1D8D3; }
+  border-bottom: 1px solid #F1D8D3;
+  /* TITO BUTTON - INTRO */ }
   @media screen and (min-width: 1400px) {
     .page-intro {
       border-bottom: none; } }
   .page-intro #qcOpenNav {
     background: url(../img/theme/openNavInvert.png) center center; }
+  .page-intro .tito-tickets-button {
+    color: #fff;
+    line-height: 60px;
+    background: #EB6851;
+    background-color: #EB6851;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+    padding: 0 40px;
+    margin-top: 50px;
+    font-size: 16px;
+    border: none; }
+    .page-intro .tito-tickets-button:hover {
+      background: rgba(0, 0, 0, 0.3); }
+  .page-intro.tito-tickets-button {
+    border: none; }
 
 #qcSlideText h1 {
   letter-spacing: 0;
@@ -1036,3 +1037,7 @@ input:focus, input:active {
   .footer-section .social-links li {
     display: inline-block;
     padding-left: .75em; }
+
+@media only screen and (max-width: 943px) {
+  #conferences-title {
+    font-size: 31px; } }

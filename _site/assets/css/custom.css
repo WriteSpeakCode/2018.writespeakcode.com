@@ -73,7 +73,8 @@ body, #qcSiteNav h4, #qcPriNav ul > li > a, #qcPriNav ul ul > li > a, .dash_titl
 }
 
 .qcTabTitle {
-  border-color: #172751;
+  /*border-color: #172751;*/
+  border: none;
 }
 
 /* END THEME CUSTOMIZATION */

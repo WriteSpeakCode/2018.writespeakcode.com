@@ -14,6 +14,32 @@
   #qcOpenNav {
     background: url(../img/theme/openNavInvert.png) center center;
   }
+
+  /* TITO BUTTON - INTRO */
+
+.tito-tickets-button {
+  color: $white;
+  line-height: 60px;
+  background: $brand-coral;
+  background-color: $brand-coral;
+  border: none;
+  border-radius: $base-border-radius;
+  letter-spacing: 1px;
+  color: white;
+  cursor: pointer;
+  padding: 0 40px;
+  margin-top: 50px;
+  font-size: 16px;
+  border: none;
+
+    &:hover {
+     background: rgba(0,0,0,0.3);
+    }
+  }
+
+  &.tito-tickets-button {
+    border: none;
+  }
 }
 
 #qcSlideText {
