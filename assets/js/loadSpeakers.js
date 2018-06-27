@@ -1,4 +1,4 @@
-const LOCAL_DATA_URL = './assets/speakers-data.json';
+const LOCAL_DATA_URL = '/assets/speakers-data.json';
 const REMOTE_DATA_URL = 'https://gist.githubusercontent.com/courte/4899ecb6eb8ce0d7e0bedca3a2e7ff0c/raw/2c5b7b34a5230c0d148f8a9f46b9cfbc9ffc8524/data.json';
 
 getData = (url) => {
