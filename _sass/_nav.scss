@@ -1,28 +1,115 @@
 /* DESKTOP/TABLET STICKY NAV BAR */
 /* Adds pseudo content before anchor ids so when you link to them, they aren't hidden by the sticky nav*/
-#speakers:target:before,
-#location:target:before,
-#sponsors:target:before,
-#code-of-conduct:target:before,
-#faq:target:before {
+.anchor-section:target:before {
   content:' ';
   display: block;
   height: 40px;
 }
 
-.nav-section {
-  background-color: $brand-blush; /*$brand-dark; */
-  text-align: center;
+.nav-container {
+  margin-bottom: 60px;
+}
 
-  @media (max-width: $breakpoint-sm-1){
-    .nav-section {
-      display: none;
+@mixin nav-color($nav_bg, $nav_text, $hover_bg, $hover_text, $callout_main: $brand-coral, $callout_invert: white) {
+  .nav-section {
+    background-color: $nav-bg;
+
+    .middleHeader {
+      background-color: $nav-bg;
+    }
+
+    .stickyHeader {
+      background-color: $nav-bg;
+    }
+
+    ul li {
+      color: $nav_text;
+    }
+
+    a {
+      color: $nav_text;
+
+      &.register-now {
+        color: $callout_main;
+
+        li:hover, li a:hover {
+          background-color: $callout_main;
+          color: $callout_invert;
+        }
+      }
+    }
+
+    li:hover, li a:hover {
+      background-color: $hover_bg;
+      color: $hover_text;
+    }
+
+    .tito-tickets-button {
+      color: $callout_main;
+      background-color: $callout-invert;
+
     }
   }
 
+  #mobileNav {
+    background-color: $nav-bg;
+    color: $nav_text;
+  }
+
+  #qcSiteNav {
+    background-color: $nav-bg;
+    color:  $nav_text;
+
+    h4 {
+      color:  $nav_text;
+    }
+  }
+
+  #qcPriNav {
+    background-color: $nav_bg;
+    color:  $nav_text;
+
+    #nav-register a {
+      color: $callout-main;
+    }
+
+    li a {
+      color: $nav_text;
+    }
+  }
+
+  #qcSiteNav h4, #qcPriNav li a {
+    color:  $nav_text;
+  }
+
+  /* MOBILE STICKY REGISTER NOW BUTTON */
+
+  .cta {
+    color: $callout-invert;
+    background: $callout-main;
+  }
+}
+
+.home-nav {
+  @include nav-color($brand-dark, white, white, $brand-dark);
+}
+
+.conference-nav {
+  @include nav-color($brand-blush, $brand-dark, white, $brand-dark);
+}
+
+@media (max-width: $breakpoint-sm-1){
+  .nav-section {
+    display: none;
+  }
+}
+
+
+.nav-section {
+  text-align: center;
+
   .middleHeader {
     position: absolute;
-    background-color:$brand-blush; /*$brand-dark; */
     text-align: center;
     width: 100%;
   }
@@ -31,7 +118,6 @@
     display: inline-block;
     padding: 1em .75em;
     font-size: $smallest-font-size;
-    color: $brand-dark;
 
     @media (min-width: 945px) {
       padding: 1em 1.25em;
@@ -43,32 +129,12 @@
     }
   }
 
-  a {
-    color: $brand-dark;
-
-    &.register-now {
-      color: $brand-coral;
-
-       li:hover {
-        background-color: $brand-coral;
-        color: white;
-      }
-    }
-  }
-  
-  li:hover {
-    background-color: white;
-    color: $brand-dark;
-  }
-
   .tito-tickets-button {
     border: none;
     border-radius: 8px;
-    color: $brand-coral;
-    /*background-color: $brand-dark;*/
     font-size: $smallest-font-size;
     padding: 10px;
-    
+
     @media (min-width: 945px) {
       font-size: $smaller-font-size;
     }
@@ -80,7 +146,6 @@
 
   .stickyHeader {
     position: fixed;
-    background-color: $brand-blush; /*$brand-dark; */
     top: 0px;
     width: 100%;
     /* Prevents pseudo elements from appearing on top of nav */
@@ -97,14 +162,9 @@
   }
 }
 
-#qcPriNav #nav-register a {
-  color: $brand-coral;
-}
 
 @media only screen and (max-width: $breakpoint-sm-1) {
   #mobileNav {
-    background-color: $brand-blush; /*$brand-dark; */
-    color: $brand-dark;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -112,32 +172,17 @@
     width: 100%;
     height: 64px;
   }
+
   #qcOpenNav {
     background: url(../img/theme/openNavInvert.png) center center;
     top: 6px;
-  }
-
-  #qcSiteNav {
-    background-color: $brand-blush;
-    color: $brand-dark;
-  }
-
-  #qcPriNav {
-    background-color: $brand-blush;
-    color: $brand-dark;
-  }
-
-  #qcSiteNav h4, #qcPriNav li a {
-    color: $brand-dark;
   }
 
   /* MOBILE STICKY REGISTER NOW BUTTON */
 
   .cta {
     padding: 10px 20px;
-    color: $brand-dark;
-    line-height: 64px;
-    background: $brand-coral;
+    line-height: $smaller-font-size;
     text-transform: uppercase;
     border-radius: 30px;
   }
