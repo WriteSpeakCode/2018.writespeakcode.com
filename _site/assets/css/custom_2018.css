@@ -172,10 +172,10 @@ a.link.white {
       color: #fff; }
       .home-nav .nav-section a.register-now {
         color: #EB6851; }
-        .home-nav .nav-section a.register-now li:hover, .home-nav .nav-section a.register-now li a:hover {
+        .home-nav .nav-section a.register-now li:hover, .home-nav .nav-section a.register-now li a:hover, .home-nav .nav-section a.register-now li:hover a {
           background-color: #EB6851;
           color: #fff; }
-    .home-nav .nav-section li:hover, .home-nav .nav-section li a:hover {
+    .home-nav .nav-section li:hover, .home-nav .nav-section li a:hover, .home-nav .nav-section li:hover a {
       background-color: #fff;
       color: #172751; }
     .home-nav .nav-section .tito-tickets-button {
@@ -216,10 +216,10 @@ a.link.white {
       color: #172751; }
       .conference-nav .nav-section a.register-now {
         color: #EB6851; }
-        .conference-nav .nav-section a.register-now li:hover, .conference-nav .nav-section a.register-now li a:hover {
+        .conference-nav .nav-section a.register-now li:hover, .conference-nav .nav-section a.register-now li a:hover, .conference-nav .nav-section a.register-now li:hover a {
           background-color: #EB6851;
           color: #fff; }
-    .conference-nav .nav-section li:hover, .conference-nav .nav-section li a:hover {
+    .conference-nav .nav-section li:hover, .conference-nav .nav-section li a:hover, .conference-nav .nav-section li:hover a {
       background-color: #fff;
       color: #172751; }
     .conference-nav .nav-section .tito-tickets-button {

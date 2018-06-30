@@ -32,14 +32,14 @@
       &.register-now {
         color: $callout_main;
 
-        li:hover, li a:hover {
+        li:hover, li a:hover, li:hover a {
           background-color: $callout_main;
           color: $callout_invert;
         }
       }
     }
 
-    li:hover, li a:hover {
+     li:hover, li a:hover, li:hover a {
       background-color: $hover_bg;
       color: $hover_text;
     }
