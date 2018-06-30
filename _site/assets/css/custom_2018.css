@@ -167,39 +167,39 @@ a.link.white {
     .home-nav .nav-section .stickyHeader {
       background-color: #172751; }
     .home-nav .nav-section ul li {
-      color: white; }
+      color: #fff; }
     .home-nav .nav-section a {
-      color: white; }
+      color: #fff; }
       .home-nav .nav-section a.register-now {
         color: #EB6851; }
         .home-nav .nav-section a.register-now li:hover, .home-nav .nav-section a.register-now li a:hover {
           background-color: #EB6851;
-          color: white; }
+          color: #fff; }
     .home-nav .nav-section li:hover, .home-nav .nav-section li a:hover {
-      background-color: white;
+      background-color: #fff;
       color: #172751; }
     .home-nav .nav-section .tito-tickets-button {
       color: #EB6851;
-      background-color: white; }
+      background-color: #fff; }
   .home-nav #mobileNav {
     background-color: #172751;
-    color: white; }
+    color: #fff; }
   .home-nav #qcSiteNav {
     background-color: #172751;
-    color: white; }
+    color: #fff; }
     .home-nav #qcSiteNav h4 {
-      color: white; }
+      color: #fff; }
   .home-nav #qcPriNav {
     background-color: #172751;
-    color: white; }
+    color: #fff; }
     .home-nav #qcPriNav #nav-register a {
       color: #EB6851; }
     .home-nav #qcPriNav li a {
-      color: white; }
+      color: #fff; }
   .home-nav #qcSiteNav h4, .home-nav #qcPriNav li a {
-    color: white; }
+    color: #fff; }
   .home-nav .cta {
-    color: white;
+    color: #fff;
     background: #EB6851; }
 
 .conference-nav {
@@ -218,13 +218,13 @@ a.link.white {
         color: #EB6851; }
         .conference-nav .nav-section a.register-now li:hover, .conference-nav .nav-section a.register-now li a:hover {
           background-color: #EB6851;
-          color: white; }
+          color: #fff; }
     .conference-nav .nav-section li:hover, .conference-nav .nav-section li a:hover {
-      background-color: white;
+      background-color: #fff;
       color: #172751; }
     .conference-nav .nav-section .tito-tickets-button {
       color: #EB6851;
-      background-color: white; }
+      background-color: #fff; }
   .conference-nav #mobileNav {
     background-color: #F1D8D3;
     color: #172751; }
@@ -243,7 +243,7 @@ a.link.white {
   .conference-nav #qcSiteNav h4, .conference-nav #qcPriNav li a {
     color: #172751; }
   .conference-nav .cta {
-    color: white;
+    color: #fff;
     background: #EB6851; }
 
 @media (max-width: 767px) {
@@ -1099,3 +1099,10 @@ input:focus, input:active {
 @media only screen and (max-width: 943px) {
   #conferences-title {
     font-size: 31px; } }
+
+#chapters .qcTabDesc {
+  color: #F1D8D3; }
+#chapters a.link {
+  color: #EB6851; }
+  #chapters a.link:hover {
+    color: #fff; }

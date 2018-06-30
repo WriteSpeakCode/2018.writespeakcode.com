@@ -10,7 +10,7 @@
   margin-bottom: 60px;
 }
 
-@mixin nav-color($nav_bg, $nav_text, $hover_bg, $hover_text, $callout_main: $brand-coral, $callout_invert: white) {
+@mixin nav-color($nav_bg, $nav_text, $hover_bg, $hover_text, $callout_main: $brand-coral, $callout_invert: $white) {
   .nav-section {
     background-color: $nav-bg;
 
@@ -91,11 +91,11 @@
 }
 
 .home-nav {
-  @include nav-color($brand-dark, white, white, $brand-dark);
+  @include nav-color($brand-dark, $white, $white, $brand-dark);
 }
 
 .conference-nav {
-  @include nav-color($brand-blush, $brand-dark, white, $brand-dark);
+  @include nav-color($brand-blush, $brand-dark, $white, $brand-dark);
 }
 
 @media (max-width: $breakpoint-sm-1){
